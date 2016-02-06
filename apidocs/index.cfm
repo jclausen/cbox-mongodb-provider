@@ -2,7 +2,7 @@
 <cfparam name="url.path" 	default="#expandPath( "./MongoDB-Provider-APIDocs" )#">
 <cfscript>
 	docName = "MongoDB-Provider-APIDocs";
-	base 	= expandPath( "/modules/couchbase-provider" );
+	base 	= expandPath( "/modules/mongodb-provider" );
 	docbox 	= new docbox.DocBox( properties = {
 		projectTitle 	= "MongoDB Cachebox Provider Module v#url.version#",
 		outputDir 		= url.path

@@ -18,7 +18,7 @@ Apache License, Version 2.0.
 
 Just drop into your **modules** folder or use the box-cli to install
 
-`box install couchbase-provider`
+`box install mongodb-provider`
 
 
 ## Settings
@@ -44,7 +44,7 @@ MongoDB = {
 				collection:"templateCache"
 			}
 		},
-		"MongoDB" : {
+		"query" : {
 		    properties : {   
 			    "expireAfterSeconds" : 3600,
 				collection:"queryCache"

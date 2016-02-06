@@ -11,6 +11,6 @@ component{
 	this.mappings[ "/docbox" ]  			= API_ROOT & "docbox";
 	this.mappings[ "/root" ] 				= rootPath;
 	this.mappings[ "/coldbox" ]  			= rootPath & "coldbox";
-	this.mappings[ "/MongoDBProvider" ] 	= rootPath & "modules/couchbase-provider";
+	this.mappings[ "/MongoDBProvider" ] 	= rootPath & "modules/mongodb-provider";
 
 }

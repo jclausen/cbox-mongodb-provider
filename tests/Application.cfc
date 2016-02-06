@@ -13,7 +13,7 @@ component{
 	this.mappings[ "/tests" ] = getDirectoryFromPath( getCurrentTemplatePath() );
 	rootPath = REReplaceNoCase( this.mappings[ "/tests" ], "tests(\\|/)", "" );
 	this.mappings[ "/root" ]   		= rootPath;
-	this.mappings[ "/MongoDBProvider" ]  = rootPath & "/modules/couchbase-provider";
+	this.mappings[ "/MongoDBProvider" ]  = rootPath & "/modules/mongodb-provider";
 
 	// any orm definitions go here.
 

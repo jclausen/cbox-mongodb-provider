@@ -2,7 +2,7 @@
 	"name" 				: "Cachebox MongoDB Provider Module for Coldbox",
 	"version"			: "1.0.0",
 	"author" 			: "Jon Clausen <jon_clausen@silowebworks.com>",
-	"slug"				: "couchbase-provider",
+	"slug"				: "mongodb-provider",
 	"type"				: "modules",
 	"homepage"			: "https://github.com/jclausen/cbox-mongodb-provider",
 	"documentation"		: "https://github.com/jclausen/cbox-mongodb-provider/wiki/",
