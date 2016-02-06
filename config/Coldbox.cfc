@@ -111,19 +111,19 @@
 					    opTimeout : 5000,
 					    timeoutExceptionThreshold : 5000,
 					    ignoreCouchBaseTimeouts : true,				
-						bucket:"default",
+						collection:"default",
 						password:"",
 						servers:"127.0.0.1:8091"
 					}
 			    },
-			   "couchBase" : {
+			   "MongoDB" : {
 			        properties : {
 			            objectDefaultTimeout : 15,
 			            opQueueMaxBlockTime : 5000,
 				        opTimeout : 5000,
 				        timeoutExceptionThreshold : 5000,
 				        ignoreCouchBaseTimeouts : true,				
-			        	bucket:"default",
+			        	collection:"default",
 			        	password:"",
 			        	servers:"127.0.0.1:8091"
 			        }

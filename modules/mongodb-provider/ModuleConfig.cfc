@@ -89,7 +89,7 @@ component {
 			caches = {
 				// Named cache for all coldbox event and view template caching
 				"template":getDefaultCacheConfig( "templateCache" ),
-				"couchBase":getDefaultCacheConfig( "defaultCache" )
+				"MongoDB":getDefaultCacheConfig( "defaultCache" )
 			}
 		};
 
@@ -104,7 +104,7 @@ component {
 
 	}
 
-	private function getDefaultCacheConfig( required string bucketName = "default" ){
+	private function getDefaultCacheConfig( required string collectionName = "default" ){
 		var defaultConfig = {
 			"provider":"MongoDBProvider.MongoDB.ColdboxProvider",
 			"properties":{
@@ -117,7 +117,7 @@ component {
 				evictCount:2,
 				maxObjects:300,
 				objectStore:"ConcurrentSoftReferenceStore", //memory sensitive
-				bucket:ARGUMENTS.bucketName
+				collection:ARGUMENTS.collectionName
 			}
 		};
 

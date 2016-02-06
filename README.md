@@ -27,36 +27,32 @@ You can add a `MongoDB` structure of settings to your `ColdBox.cfc` to configure
 ```js
 //The global MongoDB settings config
 MongoDB = {
-	// Register all the custom named caches you like here
+    //an array of servers to connect to
+    hosts= [
+	    {
+	        serverName='127.0.0.1',
+	        serverPort='27017'
+	    }
+	  ],
+    //The default database to connect to
+    db  = "mydbname",
+    // Register all the custom named caches you like here
     caches : { 
 		"template" : {
 			properties : {
-			    objectDefaultTimeout : 15,
-			    opQueueMaxBlockTime : 5000,
-			    opTimeout : 5000,
-			    timeoutExceptionThreshold : 5000,
-			    ignoreCouchBaseTimeouts : true,				
-				bucket:"default",
-				username:"",
-				password:"",
-				servers:"127.0.0.1:8091"
+			    "expireAfterSeconds" : 3600,
+				collection:"templateCache"
 			}
 		},
-		"couchBase" : {
-		    properties : {
-		        objectDefaultTimeout : 15,
-		        opQueueMaxBlockTime : 5000,
-		        opTimeout : 5000,
-		        timeoutExceptionThreshold : 5000,
-		        ignoreCouchBaseTimeouts : true,				
-		    	bucket:"default",
-		    	username:"",
-		    	password:"",
-		    	servers:"127.0.0.1:8091"
+		"MongoDB" : {
+		    properties : {   
+			    "expireAfterSeconds" : 3600,
+				collection:"queryCache"
 		    }
 		}
 	}
-}
+  
+};
 
 ```
 

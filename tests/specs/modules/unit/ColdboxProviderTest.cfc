@@ -32,7 +32,7 @@ component extends="MongoDBProviderTest"{
 	        opTimeout = 5000,
 	        timeoutExceptionThreshold = 5000,
 	        ignoreCouchBaseTimeouts = true,				
-        	bucket="default",
+        	collection="default",
         	password="",
         	servers="127.0.0.1:8091",
         	// This switches the internal provider from normal cacheBox to coldbox enabled cachebox

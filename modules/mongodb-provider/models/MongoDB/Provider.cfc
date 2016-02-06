@@ -67,7 +67,7 @@ component name="MongoDBProvider" serializable="false" implements="coldbox.system
 	        opTimeout = 5000,
 	        timeoutExceptionThreshold = 5000,
 	        ignoreMongoDBTimeouts = true,
-			bucket = "default",
+			collection = "default",
 			servers = "localhost:8091", // This can be an array
 			username = "",
 			password = "",
@@ -192,7 +192,7 @@ component name="MongoDBProvider" serializable="false" implements="coldbox.system
 		        MongoDBConnectionFactoryBuilder.setTimeoutExceptionThreshold( config.timeoutExceptionThreshold );        
 		        
 		        // Build our connection factory with the defaults we set above
-				MongoDBConnectionFactory = MongoDBConnectionFactoryBuilder.buildMongoDBConnection( URIs, config.bucket, config.password );
+				MongoDBConnectionFactory = MongoDBConnectionFactoryBuilder.buildMongoDBConnection( URIs, config.collection, config.password );
 		        				
 		        // Create actual client class.  
 				MongoDBClientClass = getJavaLoader().create("com.MongoDB.client.MongoDBClient");
@@ -697,7 +697,7 @@ component name="MongoDBProvider" serializable="false" implements="coldbox.system
     */
     void function clearAll() output="false" {
 		
-		// If flush is not enabled for this bucket, no error will be thrown.  The call will simply return and nothing will happen.
+		// If flush is not enabled for this collection, no error will be thrown.  The call will simply return and nothing will happen.
 		// Be very careful calling this.  It is an intensive asynch operation and the cache won't receive any new items until the flush
 		// is finished which might take a few minutes.
 		var future = getMongoDBClient().flush();		
